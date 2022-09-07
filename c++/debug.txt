@@ -1,0 +1,208 @@
+In file included from stackallocator_test.cpp:15:
+stackallocator.cpp: In instantiation of ‘StackAllocator<T, N>::StackAllocator(const StackAllocator<R, N>&) [with U = char; T = int; long unsigned int N = 200000]’:
+stackallocator_test.cpp:294:52:   required from here
+stackallocator.cpp:65:30: error: ‘StackStorage<200000>* StackAllocator<char, 200000>::allocator_storage_’ is private within this context
+   65 |   allocator_storage_ = other.allocator_storage_;
+      |                        ~~~~~~^~~~~~~~~~~~~~~~~~
+stackallocator.cpp:24:20: note: declared private here
+   24 |   StackStorage<N>* allocator_storage_;
+      |                    ^~~~~~~~~~~~~~~~~~
+stackallocator.cpp: In instantiation of ‘StackAllocator<T, N>::StackAllocator(const StackAllocator<R, N>&) [with U = char; T = long double; long unsigned int N = 200000]’:
+stackallocator_test.cpp:310:59:   required from here
+stackallocator.cpp:65:30: error: ‘StackStorage<200000>* StackAllocator<char, 200000>::allocator_storage_’ is private within this context
+   65 |   allocator_storage_ = other.allocator_storage_;
+      |                        ~~~~~~^~~~~~~~~~~~~~~~~~
+stackallocator.cpp:24:20: note: declared private here
+   24 |   StackStorage<N>* allocator_storage_;
+      |                    ^~~~~~~~~~~~~~~~~~
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/alloc_traits.h:34,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/basic_string.h:40,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/string:55,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/stdexcept:39,
+                 from stackallocator_test.cpp:2:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h: In substitution of ‘template<class _Alloc, class _Up> using __alloc_rebind = typename std::__allocator_traits_base::__rebind<_Alloc, _Up>::type [with _Alloc = StackAllocator<int, 200000>; _Up = int]’:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h:213:8:   required by substitution of ‘template<class _Alloc> template<class _Tp> using rebind_alloc = std::__alloc_rebind<_Alloc, _Tp> [with _Tp = int; _Alloc = StackAllocator<int, 200000>]’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/alloc_traits.h:120:65:   required from ‘struct __gnu_cxx::__alloc_traits<StackAllocator<int, 200000>, int>::rebind<int>’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:353:24:   required from ‘class std::__cxx11::_List_base<int, StackAllocator<int, 200000> >’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:556:11:   required from ‘class std::__cxx11::list<int, StackAllocator<int, 200000> >’
+stackallocator_test.cpp:29:22:   required from ‘void BasicListTest(Alloc) [with Alloc = StackAllocator<int, 200000>]’
+stackallocator_test.cpp:581:52:   required from here
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h:79:11: error: no type named ‘type’ in ‘struct std::__allocator_traits_base::__rebind<StackAllocator<int, 200000>, int, void>’
+   79 |     using __alloc_rebind
+      |           ^~~~~~~~~~~~~~
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/list:63,
+                 from stackallocator_test.cpp:4:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h: In instantiation of ‘class std::__cxx11::list<int, StackAllocator<int, 200000> >’:
+stackallocator_test.cpp:29:22:   required from ‘void BasicListTest(Alloc) [with Alloc = StackAllocator<int, 200000>]’
+stackallocator_test.cpp:581:52:   required from here
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:602:20: error: ‘_M_put_node’ has not been declared in ‘std::__cxx11::list<int, StackAllocator<int, 200000> >::_Base’
+  602 |       using _Base::_M_put_node;
+      |                    ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:603:20: error: ‘_M_get_node’ has not been declared in ‘std::__cxx11::list<int, StackAllocator<int, 200000> >::_Base’
+  603 |       using _Base::_M_get_node;
+      |                    ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:604:20: error: ‘_M_get_Node_allocator’ has not been declared in ‘std::__cxx11::list<int, StackAllocator<int, 200000> >::_Base’
+  604 |       using _Base::_M_get_Node_allocator;
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+In file included from stackallocator_test.cpp:15:
+stackallocator.cpp: In instantiation of ‘StackAllocator<T, N>::StackAllocator(const StackAllocator<R, N>&) [with U = int; T = Accountant; long unsigned int N = 200000]’:
+stackallocator_test.cpp:594:60:   required from here
+stackallocator.cpp:65:30: error: ‘StackStorage<200000>* StackAllocator<int, 200000>::allocator_storage_’ is private within this context
+   65 |   allocator_storage_ = other.allocator_storage_;
+      |                        ~~~~~~^~~~~~~~~~~~~~~~~~
+stackallocator.cpp:24:20: note: declared private here
+   24 |   StackStorage<N>* allocator_storage_;
+      |                    ^~~~~~~~~~~~~~~~~~
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/alloc_traits.h:34,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/basic_string.h:40,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/string:55,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/stdexcept:39,
+                 from stackallocator_test.cpp:2:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h: In substitution of ‘template<class _Alloc, class _Up> using __alloc_rebind = typename std::__allocator_traits_base::__rebind<_Alloc, _Up>::type [with _Alloc = StackAllocator<Accountant, 200000>; _Up = Accountant]’:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h:213:8:   required by substitution of ‘template<class _Alloc> template<class _Tp> using rebind_alloc = std::__alloc_rebind<_Alloc, _Tp> [with _Tp = Accountant; _Alloc = StackAllocator<Accountant, 200000>]’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/alloc_traits.h:120:65:   required from ‘struct __gnu_cxx::__alloc_traits<StackAllocator<Accountant, 200000>, Accountant>::rebind<Accountant>’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:353:24:   required from ‘class std::__cxx11::_List_base<Accountant, StackAllocator<Accountant, 200000> >’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:556:11:   required from ‘class std::__cxx11::list<Accountant, StackAllocator<Accountant, 200000> >’
+stackallocator_test.cpp:188:33:   required from ‘void TestAccountant(Alloc) [with Alloc = StackAllocator<Accountant, 200000>]’
+stackallocator_test.cpp:594:60:   required from here
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h:79:11: error: no type named ‘type’ in ‘struct std::__allocator_traits_base::__rebind<StackAllocator<Accountant, 200000>, Accountant, void>’
+   79 |     using __alloc_rebind
+      |           ^~~~~~~~~~~~~~
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/list:63,
+                 from stackallocator_test.cpp:4:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h: In instantiation of ‘class std::__cxx11::list<Accountant, StackAllocator<Accountant, 200000> >’:
+stackallocator_test.cpp:188:33:   required from ‘void TestAccountant(Alloc) [with Alloc = StackAllocator<Accountant, 200000>]’
+stackallocator_test.cpp:594:60:   required from here
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:602:20: error: ‘_M_put_node’ has not been declared in ‘std::__cxx11::list<Accountant, StackAllocator<Accountant, 200000> >::_Base’
+  602 |       using _Base::_M_put_node;
+      |                    ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:603:20: error: ‘_M_get_node’ has not been declared in ‘std::__cxx11::list<Accountant, StackAllocator<Accountant, 200000> >::_Base’
+  603 |       using _Base::_M_get_node;
+      |                    ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:604:20: error: ‘_M_get_Node_allocator’ has not been declared in ‘std::__cxx11::list<Accountant, StackAllocator<Accountant, 200000> >::_Base’
+  604 |       using _Base::_M_get_Node_allocator;
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+In file included from stackallocator_test.cpp:15:
+stackallocator.cpp: In instantiation of ‘StackAllocator<T, N>::StackAllocator(const StackAllocator<R, N>&) [with U = int; T = NotDefaultConstructible; long unsigned int N = 200000]’:
+stackallocator_test.cpp:613:86:   required from here
+stackallocator.cpp:65:30: error: ‘StackStorage<200000>* StackAllocator<int, 200000>::allocator_storage_’ is private within this context
+   65 |   allocator_storage_ = other.allocator_storage_;
+      |                        ~~~~~~^~~~~~~~~~~~~~~~~~
+stackallocator.cpp:24:20: note: declared private here
+   24 |   StackStorage<N>* allocator_storage_;
+      |                    ^~~~~~~~~~~~~~~~~~
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/alloc_traits.h:34,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/basic_string.h:40,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/string:55,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/stdexcept:39,
+                 from stackallocator_test.cpp:2:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h: In substitution of ‘template<class _Alloc, class _Up> using __alloc_rebind = typename std::__allocator_traits_base::__rebind<_Alloc, _Up>::type [with _Alloc = StackAllocator<NotDefaultConstructible, 200000>; _Up = NotDefaultConstructible]’:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h:213:8:   required by substitution of ‘template<class _Alloc> template<class _Tp> using rebind_alloc = std::__alloc_rebind<_Alloc, _Tp> [with _Tp = NotDefaultConstructible; _Alloc = StackAllocator<NotDefaultConstructible, 200000>]’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/alloc_traits.h:120:65:   required from ‘struct __gnu_cxx::__alloc_traits<StackAllocator<NotDefaultConstructible, 200000>, NotDefaultConstructible>::rebind<NotDefaultConstructible>’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:353:24:   required from ‘class std::__cxx11::_List_base<NotDefaultConstructible, StackAllocator<NotDefaultConstructible, 200000> >’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:556:11:   required from ‘class std::__cxx11::list<NotDefaultConstructible, StackAllocator<NotDefaultConstructible, 200000> >’
+stackallocator_test.cpp:175:42:   required from ‘void TestNotDefaultConstructible(Alloc) [with Alloc = StackAllocator<NotDefaultConstructible, 200000>]’
+stackallocator_test.cpp:613:86:   required from here
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h:79:11: error: no type named ‘type’ in ‘struct std::__allocator_traits_base::__rebind<StackAllocator<NotDefaultConstructible, 200000>, NotDefaultConstructible, void>’
+   79 |     using __alloc_rebind
+      |           ^~~~~~~~~~~~~~
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/list:63,
+                 from stackallocator_test.cpp:4:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h: In instantiation of ‘class std::__cxx11::list<NotDefaultConstructible, StackAllocator<NotDefaultConstructible, 200000> >’:
+stackallocator_test.cpp:175:42:   required from ‘void TestNotDefaultConstructible(Alloc) [with Alloc = StackAllocator<NotDefaultConstructible, 200000>]’
+stackallocator_test.cpp:613:86:   required from here
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:602:20: error: ‘_M_put_node’ has not been declared in ‘std::__cxx11::list<NotDefaultConstructible, StackAllocator<NotDefaultConstructible, 200000> >::_Base’
+  602 |       using _Base::_M_put_node;
+      |                    ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:603:20: error: ‘_M_get_node’ has not been declared in ‘std::__cxx11::list<NotDefaultConstructible, StackAllocator<NotDefaultConstructible, 200000> >::_Base’
+  603 |       using _Base::_M_get_node;
+      |                    ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:604:20: error: ‘_M_get_Node_allocator’ has not been declared in ‘std::__cxx11::list<NotDefaultConstructible, StackAllocator<NotDefaultConstructible, 200000> >::_Base’
+  604 |       using _Base::_M_get_Node_allocator;
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/alloc_traits.h:34,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/basic_string.h:40,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/string:55,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/stdexcept:39,
+                 from stackallocator_test.cpp:2:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h: In substitution of ‘template<class _Alloc, class _Up> using __alloc_rebind = typename std::__allocator_traits_base::__rebind<_Alloc, _Up>::type [with _Alloc = StackAllocator<char, 200000000>; _Up = char]’:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h:213:8:   required by substitution of ‘template<class _Alloc> template<class _Tp> using rebind_alloc = std::__alloc_rebind<_Alloc, _Tp> [with _Tp = char; _Alloc = StackAllocator<char, 200000000>]’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/alloc_traits.h:120:65:   required from ‘struct __gnu_cxx::__alloc_traits<StackAllocator<char, 200000000>, char>::rebind<char>’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_deque.h:412:21:   required from ‘class std::_Deque_base<char, StackAllocator<char, 200000000> >’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_deque.h:766:11:   required from ‘class std::deque<char, StackAllocator<char, 200000000> >’
+stackallocator_test.cpp:469:29:   required from ‘void DequeTest() [with Alloc = StackAllocator<char, 200000000>]’
+stackallocator_test.cpp:618:50:   required from here
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h:79:11: error: no type named ‘type’ in ‘struct std::__allocator_traits_base::__rebind<StackAllocator<char, 200000000>, char, void>’
+   79 |     using __alloc_rebind
+      |           ^~~~~~~~~~~~~~
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/deque:67,
+                 from stackallocator_test.cpp:6:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_deque.h: In instantiation of ‘class std::deque<char, StackAllocator<char, 200000000> >’:
+stackallocator_test.cpp:469:29:   required from ‘void DequeTest() [with Alloc = StackAllocator<char, 200000000>]’
+stackallocator_test.cpp:618:50:   required from here
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_deque.h:811:20: error: ‘_M_create_nodes’ has not been declared in ‘std::deque<char, StackAllocator<char, 200000000> >::_Base’
+  811 |       using _Base::_M_create_nodes;
+      |                    ^~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_deque.h:812:20: error: ‘_M_destroy_nodes’ has not been declared in ‘std::deque<char, StackAllocator<char, 200000000> >::_Base’
+  812 |       using _Base::_M_destroy_nodes;
+      |                    ^~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_deque.h:813:20: error: ‘_M_allocate_node’ has not been declared in ‘std::deque<char, StackAllocator<char, 200000000> >::_Base’
+  813 |       using _Base::_M_allocate_node;
+      |                    ^~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_deque.h:814:20: error: ‘_M_deallocate_node’ has not been declared in ‘std::deque<char, StackAllocator<char, 200000000> >::_Base’
+  814 |       using _Base::_M_deallocate_node;
+      |                    ^~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_deque.h:815:20: error: ‘_M_allocate_map’ has not been declared in ‘std::deque<char, StackAllocator<char, 200000000> >::_Base’
+  815 |       using _Base::_M_allocate_map;
+      |                    ^~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_deque.h:816:20: error: ‘_M_deallocate_map’ has not been declared in ‘std::deque<char, StackAllocator<char, 200000000> >::_Base’
+  816 |       using _Base::_M_deallocate_map;
+      |                    ^~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_deque.h:817:20: error: ‘_M_get_Tp_allocator’ has not been declared in ‘std::deque<char, StackAllocator<char, 200000000> >::_Base’
+  817 |       using _Base::_M_get_Tp_allocator;
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/cassert:44,
+                 from stackallocator_test.cpp:12:
+stackallocator_test.cpp: In instantiation of ‘void DequeTest() [with Alloc = StackAllocator<char, 200000000>]’:
+stackallocator_test.cpp:618:50:   required from here
+stackallocator_test.cpp:472:14: error: ‘class std::deque<char, StackAllocator<char, 200000000> >’ has no member named ‘back’
+  472 |     assert(d.back() == 1);
+      |            ~~^~~~
+stackallocator_test.cpp:475:13: error: no match for ‘operator[]’ (operand types are ‘std::deque<char, StackAllocator<char, 200000000> >’ and ‘int’)
+  475 |     assert(d[1'000'000] == 5);
+      |            ~^
+stackallocator_test.cpp:483:13: error: no match for ‘operator[]’ (operand types are ‘std::deque<char, StackAllocator<char, 200000000> >’ and ‘int’)
+  483 |     assert(d[4'000'000] == 1);
+      |            ~^
+stackallocator_test.cpp:489:13: error: no match for ‘operator[]’ (operand types are ‘std::deque<char, StackAllocator<char, 200000000> >’ and ‘int’)
+  489 |     assert(d[400'000] == 1);
+      |            ~^
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/alloc_traits.h:34,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/basic_string.h:40,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/string:55,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/stdexcept:39,
+                 from stackallocator_test.cpp:2:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h: In substitution of ‘template<class _Alloc, class _Up> using __alloc_rebind = typename std::__allocator_traits_base::__rebind<_Alloc, _Up>::type [with _Alloc = StackAllocator<int, 200000000>; _Up = int]’:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h:213:8:   required by substitution of ‘template<class _Alloc> template<class _Tp> using rebind_alloc = std::__alloc_rebind<_Alloc, _Tp> [with _Tp = int; _Alloc = StackAllocator<int, 200000000>]’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/alloc_traits.h:120:65:   required from ‘struct __gnu_cxx::__alloc_traits<StackAllocator<int, 200000000>, int>::rebind<int>’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:353:24:   required from ‘class std::__cxx11::_List_base<int, StackAllocator<int, 200000000> >’
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:556:11:   required from ‘class std::__cxx11::list<int, StackAllocator<int, 200000000> >’
+stackallocator_test.cpp:507:38:   required from ‘void TestPerformance() [with Container = std::__cxx11::list]’
+stackallocator_test.cpp:628:31:   required from here
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/alloc_traits.h:79:11: error: no type named ‘type’ in ‘struct std::__allocator_traits_base::__rebind<StackAllocator<int, 200000000>, int, void>’
+   79 |     using __alloc_rebind
+      |           ^~~~~~~~~~~~~~
+In file included from /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/list:63,
+                 from stackallocator_test.cpp:4:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h: In instantiation of ‘class std::__cxx11::list<int, StackAllocator<int, 200000000> >’:
+stackallocator_test.cpp:507:38:   required from ‘void TestPerformance() [with Container = std::__cxx11::list]’
+stackallocator_test.cpp:628:31:   required from here
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:602:20: error: ‘_M_put_node’ has not been declared in ‘std::__cxx11::list<int, StackAllocator<int, 200000000> >::_Base’
+  602 |       using _Base::_M_put_node;
+      |                    ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:603:20: error: ‘_M_get_node’ has not been declared in ‘std::__cxx11::list<int, StackAllocator<int, 200000000> >::_Base’
+  603 |       using _Base::_M_get_node;
+      |                    ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/bits/stl_list.h:604:20: error: ‘_M_get_Node_allocator’ has not been declared in ‘std::__cxx11::list<int, StackAllocator<int, 200000000> >::_Base’
+  604 |       using _Base::_M_get_Node_allocator;
+      |                    ^~~~~~~~~~~~~~~~~~~~~

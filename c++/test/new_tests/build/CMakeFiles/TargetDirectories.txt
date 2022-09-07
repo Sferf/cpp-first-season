@@ -1,0 +1,3 @@
+/home/mr_Isachenko/projects/c++/test/new_tests/build/CMakeFiles/test.dir
+/home/mr_Isachenko/projects/c++/test/new_tests/build/CMakeFiles/edit_cache.dir
+/home/mr_Isachenko/projects/c++/test/new_tests/build/CMakeFiles/rebuild_cache.dir

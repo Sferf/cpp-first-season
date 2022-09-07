@@ -1,0 +1,1 @@
+clang++ -rdynamic CMakeFiles/result.dir/test.cpp.o CMakeFiles/result.dir/DequeTests.cpp.o -o result 
